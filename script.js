@@ -87,9 +87,26 @@ higestArrayString(arr)
 // c. Input -> [7,1]
 // Output -> 1
 
+nums = [7,1]
 
-// todo
+function getSecondLargest(nums) {
+  let max = 0, secondMax = 0;
+  nums.forEach((num) => {
+    if (num > max){
+      secondMax = max
+      max = num
+    } else if 
+      (num !=max && num > secondMax){
+        secondMax = num;
+      } else if 
+      (num.length = 1){
+        secondMax = 0
+      } 
 
+  });
+  return secondMax;
+}
+console.log(getSecondLargest(nums))
 
 
 
@@ -118,18 +135,16 @@ getVowelsCount("manado");
 // input berupa integer (harus lebih dari 0), untuk referensi berikut adalah rumus factorial:
  
 
-// const factorial = n => !(n > 1) ? 1 : factorial(n - 1) * n;
-// console.log(factorial(4))
-
-function factorial(number) {
-    total = 1
-    while (number > 0) {
-      total *= number
-      number = number - 1
-    }
-    return total
+const count_factorial = (n) => {
+  let value = 1;
+  if (n == 0 || n == 1) {
+    return value;
   }
-  console.log(factorial(4))
+
+  return n * count_factorial(n - 1);
+};
+
+console.log(count_factorial(5));
 
 
 
@@ -140,7 +155,3 @@ function factorial(number) {
 
 const averageValue = (value) => value.reduce((a, b) => a + b) / value.length;
 console.log(averageValue([3,5,7,3]));
-
-
-let nilai =[4,5,2,3,5].reduce()
-console.log(nilai)

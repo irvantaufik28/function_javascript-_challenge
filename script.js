@@ -68,7 +68,7 @@ const count_char= (text, char) => {
 
 arr =['javascript', 'java','python','php']
 const higestArrayString = (myArray) =>{
-  let array =myArray.map((value)=>value).sort((a, b) => b-a)[0]
+  let array =myArray.map((value)=>value).sort((a, b) => b.length-a.length)[0]
  console.log(array)
   }
 
